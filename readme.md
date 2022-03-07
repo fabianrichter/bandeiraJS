@@ -34,57 +34,24 @@ To change the behaviour of your bandeira, you have two options.
 
 ### Available options
 
-<table>
-<tr>
-<th>Data attribute</th>
-<th>JS object key</th>
-<th>Data type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>data-bandeira-text</td>
-<td>text</td>
-<td>string</td>
-<td>"you did not set any text"</td>
-<td>The text to be shown </td>
-</tr>
-<tr>
-<td>data-bandeira-separator</td>
-<td>separator</td>
-<td>string</td>
-<td>" "</td>
-<td>The separator between each text instance</td>
-</tr>
-<tr>
-<td>-</td>
-<td>selector</td>
-<td>string</td>
-<td>".bandeira-container"</td>
-<td>The selector to display bandeira</td>
-</tr>
-<tr>
-<td>data-bandeira-speed</td>
-<td>speed</td>
-<td>number</td>
-<td>5000</td>
-<td>The amount of time, one text instance needs to do one animation cycle</td>
-</tr>
-<tr>
-<td>data-bandeira-ltr</td>
-<td>ltr</td>
-<td>boolean</td>
-<td>true</td>
-<td>Animate from left to right</td>
-</tr>
-<tr>
-<td>data-bandeira-upper-case</td>
-<td>upperCase</td>
-<td>boolean</td>
-<td>true</td>
-<td>Show the text in upper case</td>
-</tr>
-</table>
+**`text`** | **`data-bandeira-text`** (string)<br/>
+The text to be shown in your Bandeira. Default is "You did not set any text". 
+
+**`separator`** | **`data-bandeira-separator`** (string)<br/>
+The separator between each text instance of your Bandeira. Default is one space.
+
+**`selector`** (string)<br/>
+The selector of your Bandeira instance. Default is ".bandeira-container".
+
+**`speed`** | **`data-bandeira-speed`** (number)<br/>
+The amount of time, one text instance needs to translate by 100% in milliseconds. Default is 5000.
+
+**`uppercase`** | **`data-bandeira-uppercase`** (boolean)<br/>
+Boolean if the text should display as capitals or not. Default is true.
+
+**`ltr`** | **`data-bandeira-ltr`** (boolean)<br/>
+Boolean if the animation should go from left to right or not. Default is true.
+
 
 ### Change options via data-attributes
 If you want to change the behaviour directly in the HTML, pass the arguments as data-attributes. Example:
@@ -106,11 +73,11 @@ const bandeira = new Bandeira({
 
 ## Methods
 
-**`pause()`**
+**`pause()`**<br/>
 Pause the animation. `Bandeira.pause();`
 
-**`play()`**
+**`play()`**<br/>
 Play the animation after pausing it. `Bandeira.play();`
 
-**`update()`**
+**`update()`**<br/>
 Destroy your Bandeira and reload it. `Bandeira.update();`
