@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bandeira Example</title>
+        <style>
+            body {
+                width: 100vw;
+                position: relative;
+                margin: 0;
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 18px;
+                background-color: #e17272;
+                color: yellow;
+                padding-top: 20px;
+            }
+
+            h1,
+            h2 {
+                margin-left: 10px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Text Banner Class</h1>
+            <h2>Banner without any settings</h2>
+            <div class="text-banner-container"></div>
+
+            <h2>Banner with data attributes</h2>
+            <div
+                class="data-banner"
+                data-banner-text="This comes from the data-banner-text attribute"
+                data-banner-speed="5000"
+                data-banner-separator=" &#x2022; "
+                data-banner-ltr="true"
+                data-banner-upper-case="false"
+                data-banner-amount="5"
+            ></div>
+
+            <h2>Banner with JavaScript settings</h2>
+            <div class="js-banner"></div>
+        </main>
+        <footer>
+            <script src="bandeira.min.js"></script>
+            <script>
+                let textBannerOne = new Bandeira();
+
+                let textBannerTwo = new Bandeira({
+                    selector: '.data-banner',
+                }); // no settings specified, use data-attributes
+
+                setTimeout(() => {
+                    textBannerTwo.pause();
+                }, 2000);
+
+                setTimeout(() => {
+                    textBannerTwo.play();
+                }, 4000);
+
+                setTimeout(() => {
+                    textBannerTwo.update();
+                }, 6000);
+
+                let textBannerThree = new Bandeira({
+                    text: 'This comes from the JS settings object 😃', // optional
+                    upperCase: true, // optional, default is false
+                    selector: '.js-banner', // optional, default is .text-banner-container
+                    separator: '&#x20;–&#x20;', // optional, default is one space
+                    speed: 3000, // optional, default is 5000
+                    ltr: false, // optional, default is true
+                    amount: 12, // optional, default is 10
+                });
+            </script>
+        </footer>
+    </body>
+</html>
