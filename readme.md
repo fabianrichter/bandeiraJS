@@ -33,42 +33,49 @@ To change the behaviour of your bandeira, you have two options.
 <th>JS object key</th>
 <th>Data type</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 <tr>
-<td>data-text</td>
+<td>data-bandeira-text</td>
 <td>text</td>
 <td>string</td>
-<td>you did not set any text</td>
+<td>"you did not set any text"</td>
+<td>The text to be shown </td>
 </tr>
 <tr>
-<td>data-separator</td>
+<td>data-bandeira-separator</td>
 <td>separator</td>
 <td>string</td>
-<td>(single space)</td>
+<td>" "</td>
+<td>The separator between each text instance</td>
 </tr>
 <tr>
 <td>-</td>
 <td>selector</td>
 <td>string</td>
-<td>.bandeira-container</td>
+<td>".bandeira-container"</td>
+<td>The selector to display bandeira</td>
 </tr>
 <tr>
-<td>data-speed</td>
+<td>data-bandeira-speed</td>
 <td>speed</td>
 <td>number</td>
 <td>5000</td>
+<td>The amount of time, one text instance needs to do one animation cycle</td>
 </tr>
 <tr>
-<td>data-ltr</td>
+<td>data-bandeira-ltr</td>
 <td>ltr</td>
 <td>boolean</td>
 <td>true</td>
+<td>Animate from left to right</td>
 </tr>
 <tr>
-<td>data-upper-case</td>
+<td>data-bandeira-upper-case</td>
 <td>upperCase</td>
 <td>boolean</td>
 <td>true</td>
+<td>Show the text in upper case</td>
 </tr>
 </table>
 
