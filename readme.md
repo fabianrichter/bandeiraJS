@@ -1,31 +1,38 @@
-# bandeiraJS 
-Bandeira is lightweight JavaScript library for rotating text banners.
+# BandeiraJS 
+Bandeira is a lightweight JavaScript library for rotating text banners.
+
+- - -
 
 ## Contributing
 Compile via `npm run build`.
 
-## How to use bandeiraJS
-### Import
-In your HTML import it with a script tag.
-```html
-<script src="bandeira.min.js"></script>
-```
-Make sure, your HTML contains a container to place the banner like this:
+## Installation
+
+Installation is super easy! First make sure, your HTML contains a container to place the banner like this:
 ```html
 <div class="bandeira-container"></div>
 ```
-Now you can Bandeira as a class.
+If you use Webpack ...
 ```js
-const bandeira = new Bandeira();
+import Bandeira from 'bandeira';
+new Bandeira();
 ```
-### Settings
+... or simply add it to your HTML
+```html
+<script src="bandeira.min.js"></script>
+<script>
+    new Bandeira();
+</script>
+```
+
+## How to use Bandeira
 To change the behaviour of your bandeira, you have two options.
 <ol>
 <li>Pass settings via data-attributes in the HTML</li>
 <li>Pass settings as an object in the JavaScript</li>
 </ol>
 
-#### Available Settings
+### Available options
 
 <table>
 <tr>
@@ -79,7 +86,7 @@ To change the behaviour of your bandeira, you have two options.
 </tr>
 </table>
 
-#### Change settings via data-attributes
+### Change options via data-attributes
 If you want to change the behaviour directly in the HTML, pass the arguments as data-attributes. Example:
 ```html
 <div class="bandeira-container"
@@ -87,7 +94,7 @@ If you want to change the behaviour directly in the HTML, pass the arguments as 
      data-speed="5000"></div>
 ```
 
-#### Change settings via JavaScript object
+### Change options via JavaScript object
 To change the behaviour in the JavaScript, pass a settings object like this
 ```js
 const bandeira = new Bandeira({
@@ -96,3 +103,14 @@ const bandeira = new Bandeira({
     speed: 5000,
 });
 ```
+
+## Methods
+
+**`pause()`**
+Pause the animation. `Bandeira.pause();`
+
+**`play()`**
+Play the animation after pausing it. `Bandeira.play();`
+
+**`update()`**
+Destroy your Bandeira and reload it. `Bandeira.update();`
