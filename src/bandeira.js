@@ -46,7 +46,6 @@ export default class Bandeira {
                 _settings[key] = currentSetting;
             }
         }
-        console.log(_settings);
 
         // set global settings or fall back to defaults
         _settings.text === undefined
