@@ -4,7 +4,7 @@ export default class Bandeira {
         const defaults = {
             text: 'You did not set any text 😓',
             upperCase: true,
-            selector: '.text-banner-container',
+            selector: '.bandeira-container',
             separator: '&#x20;',
             speed: 5000,
             ltr: true,
@@ -27,7 +27,7 @@ export default class Bandeira {
         for (const key in defaults) {
             // convert camelcase key from defaults into dashcase string
             const dataKey =
-                'data-banner-' +
+                'data-bandeira-' +
                 key.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase());
             let currentSetting = this.target.getAttribute(dataKey);
 
